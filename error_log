@@ -1,0 +1,12 @@
+[17-Aug-2013 14:02:19] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/single.php on line 31
+[17-Aug-2013 14:02:21] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/single.php on line 31
+[20-Aug-2013 09:34:31] PHP Fatal error:  Call to undefined function is_front_oage() in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/header.php on line 14
+[20-Aug-2013 09:36:00] PHP Parse error:  syntax error, unexpected ';' in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/header.php on line 14
+[20-Aug-2013 09:36:42] PHP Parse error:  syntax error, unexpected ';' in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/header.php on line 14
+[20-Aug-2013 09:38:05] PHP Parse error:  syntax error, unexpected T_ECHO in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/header.php on line 14
+[20-Aug-2013 09:44:40] PHP Parse error:  syntax error, unexpected T_ELSE, expecting ',' or ';' in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/header.php on line 14
+[20-Aug-2013 09:45:15] PHP Parse error:  syntax error, unexpected T_ELSE, expecting ',' or ';' in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/header.php on line 14
+[20-Aug-2013 09:45:21] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/header.php on line 14
+[20-Aug-2013 09:45:39] PHP Parse error:  syntax error, unexpected T_ECHO in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/header.php on line 14
+[20-Aug-2013 09:48:03] PHP Parse error:  syntax error, unexpected '?' in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/header.php on line 14
+[20-Aug-2013 09:48:39] PHP Parse error:  syntax error, unexpected T_ECHO in /home3/bardenc1/public_html/harry/wp-content/themes/hpf/header.php on line 14
