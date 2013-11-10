@@ -24,8 +24,6 @@ function hpf_setup() {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on hpf, use a find and replace
-	 * to change 'hpf' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'hpf', get_template_directory() . '/languages' );
 
@@ -62,6 +60,49 @@ function hpf_setup() {
 }
 endif; // hpf_setup
 add_action( 'after_setup_theme', 'hpf_setup' );
+
+
+/**
+ * Register custom post types
+ */
+function cptui_register_my_cpt_portfolio() {
+
+	register_post_type('portfolio', array(
+		'label' => 'Projects',
+		'description' => 'Portfolio projects',
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'capability_type' => 'post',
+		'map_meta_cap' => true,
+		'hierarchical' => true,
+		'rewrite' => array('slug' => 'portfolio', 'with_front' => true),
+		'query_var' => true,
+		'has_archive' => true,
+		'menu_position' => '5',
+		'supports' => array('title','editor','revisions','thumbnail'),
+		'taxonomies' => array('category','post_tag'),
+		'labels' => array (
+			'name' => 'Projects',
+			'singular_name' => 'Project',
+			'menu_name' => 'Projects',
+			'add_new' => 'Add Project',
+			'add_new_item' => 'Add New Project',
+			'edit' => 'Edit',
+			'edit_item' => 'Edit Project',
+			'new_item' => 'New Project',
+			'view' => 'View Project',
+			'view_item' => 'View Project',
+			'search_items' => 'Search Projects',
+			'not_found' => 'No Projects Found',
+			'not_found_in_trash' => 'No Projects Found in Trash',
+			'parent' => 'Parent Project',
+		)
+	));
+
+}
+add_action('init', 'cptui_register_my_cpt_portfolio');
+
 
 /**
  * Register widgetized area and update sidebar with default widgets
