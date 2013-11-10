@@ -9,12 +9,20 @@ Version: 1.0
 @import url(css/normalize.css);
 @import url(http://fonts.googleapis.com/css?family=Raleway:100,200,400);
 
-
-html,
-body {
-	height: 100%;
+/* Clear Fix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
 }
 
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
 
 body {
 	font: 400 16px/1.5 Raleway, sans-serif;
@@ -25,10 +33,6 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	width: 960px;
-}
-
-.home #main {
-	margin-top: 40px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,26 +52,16 @@ a:active {
 
 /* Header
 ---------------------------------------- */
-#masthead {
-	width: 100%;
-	height: 180px;
-	background: #fff;
-	margin: 40px 0;
-
+.site-header {
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
-	.head-inner {
-		width: 960px;
-		margin: 0 auto;
-	}
-
 .site-branding {
-	float: left;
-	width: 164px;
-	height: 164px;
-	margin-left: 79px;
-	position: relative;
-	top: -74px;
+	width: 240px;
+	height: 240px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Alignment */
@@ -114,62 +108,35 @@ a:active {
 	z-index: 100000; /* Above WP toolbar */
 }
 
-/* Clearing */
-.clear:before,
-.clear:after,
-[class*="content"]:before,
-[class*="content"]:after,
-[class*="site"]:before,
-[class*="site"]:after {
-	content: '';
-	display: table;
-}
-
-.clear:after,
-[class*="content"]:after,
-[class*="site"]:after {
-	clear: both;
-}
-
-/* #content */
-.site {
-	min-height: 100%;
-}
-
-/* #site-content */
 .site-content {
-	padding-bottom: 180px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 /* Home (projects)
 ----------------------------------------------- */
 .project {
 	float: left;
-	margin: 0 6px 6px 0;
-	width: 316px;
-	height: 200px;
+	margin: 0;
+	width: 480px;
+	height: 480px;
 	position: relative;
-}
-
-.project:nth-of-type(3n){
-	margin-right: 0;
 }
 
 	.project .overlay {
 		display: block;
-		width: 316px;
-		height: 200px;
+		width: 480px;
+		height: 480px;
 		text-align: center;
 		position: absolute;
 		top: 0;
 		left: 0;
-		/*background-color: rgba(70, 152, 158, 0.8);*/
 		background-color: rgba(0, 0, 0, 0.6);
 	}
 
 		.project .project-title {
 			color: #fff;
-			margin-top: 80px;
+			margin-top: 220px;
 			font: 200 18px Raleway, sans-serif;
 			text-transform: uppercase;
 		}
@@ -177,32 +144,38 @@ a:active {
 /* =Menu
 ----------------------------------------------- */
 .main-navigation {
-	margin-right: 79px;
-	margin-top: 74px;
+	margin-top: 40px;
+	background-color: #e6e6e6;
+	padding: 15px;
 }
 
 	.main-navigation ul {
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		text-align: center;
 	}
 
 		.main-navigation li {
-			float: right;
+			display: inline-block;
 			position: relative;
 			margin-left: 20px;
 		}
 
+		.main-navigation li:first-of-type {
+			margin-left: 0;
+		}
+
 			.main-navigation a {
-				display: block;
 				text-decoration: none;
-				color: #000;
-				font: 200 18px Raleway, sans-serif;
+				color: #808080;
+				font: 200 14px Raleway, sans-serif;
+				letter-spacing: 0.1em;
 				text-transform: uppercase;
 			}
 
 			.main-navigation a:hover {
-				color: #666;
+				color: #000;
 			}
 
 		.main-navigation ul ul {
@@ -362,10 +335,9 @@ object {
 /* Footer
 ----------------------------------------------- */
 .site-footer {
+	margin-bottom: 40px;
 	border-top: 1px solid #999;
 	color: #999;
-	height: 150px;
-	margin-top: -150px;
 	text-align: center;
 	font-size: 10px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

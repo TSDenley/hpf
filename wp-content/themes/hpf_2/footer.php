@@ -8,8 +8,7 @@
  */
 ?>
 
-	</div><!-- #content -->
-</div><!-- #page -->
+</div><!-- #content -->
 
 <footer id="colophon" class="site-footer container" role="contentinfo">
 	<div class="site-info">
@@ -19,6 +18,8 @@
 	<?php endif; ?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
+
+</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

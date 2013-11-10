@@ -42,6 +42,7 @@ function hpf_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'page_width', 960, 9999);
 	add_image_size( 'portfolio-thumb', 316, 200, true);
+	add_image_size( 'portfolio-thumb-480', 480, 480, true);
 
 	add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 	function my_custom_sizes( $sizes ) {

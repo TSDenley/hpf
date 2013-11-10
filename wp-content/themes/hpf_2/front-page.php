@@ -14,12 +14,12 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area container">
-		<main id="main" class="site-main clear" role="main">
+		<main id="main" class="site-main cf" role="main">
 
 		<?php if ( have_posts() ) :
 
 			$args = array(
-				'posts_per_page' => 12,
+				'posts_per_page' => 24,
 				'post_type'      => 'portfolio'
 			);
 			$the_query = new WP_Query( $args ); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 							<span class="overlay">
 								<h2 class="project-title"><?php the_title(); ?></h2>
 							</span>
-							<?php the_post_thumbnail('portfolio-thumb'); ?>
+							<?php the_post_thumbnail('portfolio-thumb-480'); ?>
 						</a>
 					</div>
 
