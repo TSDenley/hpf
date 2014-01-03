@@ -16,6 +16,8 @@
 				'after'  => '</div>',
 			) );
 		?>
+
+		<?php print get_post_meta( get_the_ID(), 'hpf_test_field', true ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
